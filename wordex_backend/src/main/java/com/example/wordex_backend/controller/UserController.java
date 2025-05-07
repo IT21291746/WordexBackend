@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.mail.MessagingException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RequestMapping("/users")
 public class UserController {
 

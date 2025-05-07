@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000") // Allow frontend access
+@CrossOrigin(origins = "*")
 @RequestMapping("/quiz")
 public class SummaryController {
 
