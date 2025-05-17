@@ -24,6 +24,11 @@ public class CompletedActivitiesService {
         return completedactivitiesRepository.findAll();
     }
 
+    public List<CompletedActivities> getCompletedActivitiesByUserId(String userId) {
+    return completedActivitiesRepository.findByUserId(userId);
+}
+
+
     public Optional<CompletedActivities> getCompletedActivitiesById(String id) {
         return completedactivitiesRepository.findById(id);
     }

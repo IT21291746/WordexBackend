@@ -46,6 +46,14 @@ public class CompletedActivitiesController {
         return ResponseEntity.ok(completedactivitiesService.getAllActivities());
     }
 
+@GetMapping("/user/{userId}")
+public ResponseEntity<List<CompletedActivities>> getCompletedActivitiesByUserId(@PathVariable String userId) {
+    List<CompletedActivities> activities = completedactivitiesService.getCompletedActivitiesByUserId(userId);
+    return ResponseEntity.ok(activities);
+}
+
+
+
     // Get a specific completedactivities by ID
     @GetMapping("/{id}")
     public ResponseEntity<CompletedActivities> getCompletedActivitiesById(@PathVariable("id") String id) {
