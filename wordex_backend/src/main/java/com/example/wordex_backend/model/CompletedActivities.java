@@ -12,5 +12,6 @@ public class CompletedActivities {
     @Id
     private String id;
     private String userId;
-    private String activityId; 
+    private String activityId;
+    private Date timestamp; 
 }
