@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CompletedActivitiesRepository extends MongoRepository<CompletedActivities, String> {
-        List<Iq> findByQuestionContainingIgnoreCase(String keyword);
+    // Custom query to find questions by a keyword
 } 
