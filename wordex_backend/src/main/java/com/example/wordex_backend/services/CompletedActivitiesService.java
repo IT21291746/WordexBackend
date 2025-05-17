@@ -5,33 +5,29 @@ import com.example.wordex_backend.repository.CompletedActivitiesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CompletedActivitiesService {
 
     @Autowired
-    private CompletedActivitiesRepository completedactivitiesRepository;
+    private CompletedActivitiesRepository completedActivitiesRepository;
 
-    public CompletedActivities saveCompletedActivities(CompletedActivities completedactivities) {
-        return completedactivitiesRepository.save(completedactivities);
-    }
-    public void deleteCompletedActivities(String id) {
-        completedactivitiesRepository.deleteById(id);
+    public CompletedActivities saveCompletedActivities(CompletedActivities completedActivities) {
+        return completedActivitiesRepository.save(completedActivities);
     }
 
     public List<CompletedActivities> getAllActivities() {
-        return completedactivitiesRepository.findAll();
+        return completedActivitiesRepository.findAll();
     }
-
-    public List<CompletedActivities> getCompletedActivitiesByUserId(String userId) {
-    return completedActivitiesRepository.findByUserId(userId);
-}
-
 
     public Optional<CompletedActivities> getCompletedActivitiesById(String id) {
-        return completedactivitiesRepository.findById(id);
+        return completedActivitiesRepository.findById(id);
     }
 
-    
-} 
+    // ✅ NEW method to get completed activities by userId
+    public List<CompletedActivities> getCompletedActivitiesByUserId(String userId) {
+        return completedActivitiesRepository.findByUserId(userId);
+    }
+}
