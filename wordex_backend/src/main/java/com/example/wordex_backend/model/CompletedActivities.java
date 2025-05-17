@@ -1,6 +1,6 @@
 package com.example.wordex_backend.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
