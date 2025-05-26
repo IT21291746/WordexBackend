@@ -45,7 +45,7 @@ public class RacqController {
     // Get random 5 IQ questions
     @GetMapping("/random")
     public ResponseEntity<List<Racq>> getRandomQuestions() {
-        List<Racq> questions = racqService.getRandomQuestions(5);
+        List<Racq> questions = racqService.getRandomQuestions(6);
         return ResponseEntity.ok(questions);
     }
 
